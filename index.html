@@ -10,19 +10,19 @@
     <script src="scripts/main.js"></script>
 </head>
 <body>
-    <section class="hero has-background-grey is-fullheight">
+    <section class="hero is-fullheight">
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
                     <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-                        <form action="POST" style="box-shadow: 0 0 1em silver;" class="box">
+                        <form action="POST" class="box">
                             <h3 class="title is-3 has-text-centered">Login</h3>
 
                             <!-- Campo de E-mail -->
                             <div class="field">
-                                <label for="email" class="label has-text-weight-light">E-mail</label>
+                                <label for="email" class="label has-text-weight-light" id="label-user">E-mail</label>
                                 <div class="control has-icons-left">
-                                    <input type="email" placeholder="seuemail@aqui.com" class="input" required>
+                                    <input type="email" placeholder="seuemail@aqui.com" id="user" class="input" required>
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-envelope"></i>
                                     </span>
@@ -31,9 +31,9 @@
 
                             <!-- Campo de senha -->
                             <div class="field">
-                                <label for="password" class="label has-text-weight-light">Senha</label>
+                                <label for="password" class="label has-text-weight-light" id="label-password">Senha</label>
                                 <div class="control has-icons-left">
-                                    <input type="password" placeholder="********" class="input" required>
+                                    <input type="password" placeholder="********" id="password" class="input" required>
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-lock"></i>
                                     </span>
@@ -42,26 +42,35 @@
 
                             <!-- Lembrar usuário -->
                             <div class="field has-text-grey">
-                                <label for="remember-user" class="checkbox" id="label" onclick="setCheckedState()">
+                                <label for="remember-user" class="checkbox" onclick="setCheckedState()">
                                     <input type="checkbox" id="checkbox-remember-user"> Lembrar usuário
                                 </label>
                             </div> 
 
                             <!-- Botão de submissão -->
                             <div class="field has-text-centered">
-                                <button class="button is-info is-fullwidth">Entrar</button>
+                                <button class="button is-info is-fullwidth" onclick="listener()">Entrar</button>
                             </div>
-                        </form>
 
-                        <!-- Esqueci a senha -->
+                            <!-- Esqueci a senha -->
                         <p class="has-text-grey has-text-centered">
                             <a href="#">Cadastrar</a> &nbsp;·&nbsp;
                             <a href="#">Esqueci a senha</a> &nbsp;
                         </p>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="content has-text-centered">
+              <p>
+                Feito com &#128153; por João Almeida <strong>:)</strong>
+              </p>
+            </div>
+          </footer>
     </section>
 </body>
 </html>
