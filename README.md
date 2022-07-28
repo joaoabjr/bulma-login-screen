@@ -1,2 +1,2 @@
 # Login screen and user authentication
-A login screen with user authentication using Bulma and Node.js
+A login screen with user authentication using Bulma and JavaScript
